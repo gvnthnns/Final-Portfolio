@@ -6,6 +6,7 @@
   <meta name="description" content="Engineering portfolio showcasing Gavin Thennes's projects, skills, and academic reflections.">
   <meta name="theme-color" content="#f8f7f4">
   <title>Gavin Thennes | Engineering Portfolio</title>
+  <script src="page-transitions.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -23,14 +24,85 @@
 
   <main>
     <section class="hero" id="home">
+      <div class="circuit-board" aria-hidden="true">
+        <svg viewBox="0 0 1600 700" preserveAspectRatio="xMidYMid slice">
+          <defs>
+            <linearGradient id="board-bg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#06366f"/>
+              <stop offset="0.52" stop-color="#031b3d"/>
+              <stop offset="1" stop-color="#020d20"/>
+            </linearGradient>
+            <linearGradient id="trace" x1="0" y1="0" x2="1" y2="0">
+              <stop stop-color="#0864c7"/>
+              <stop offset="0.5" stop-color="#10b9ff"/>
+              <stop offset="1" stop-color="#0873dc"/>
+            </linearGradient>
+            <linearGradient id="copy-shade" x1="0" y1="0" x2="1" y2="0">
+              <stop stop-color="#020e24" stop-opacity=".72"/>
+              <stop offset=".64" stop-color="#020e24" stop-opacity=".45"/>
+              <stop offset="1" stop-color="#020e24" stop-opacity="0"/>
+            </linearGradient>
+            <filter id="trace-glow" x="-30%" y="-30%" width="160%" height="160%">
+              <feGaussianBlur stdDeviation="5"/>
+            </filter>
+            <radialGradient id="horizon-glow">
+              <stop stop-color="#0789ed" stop-opacity=".55"/>
+              <stop offset="1" stop-color="#0789ed" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <rect width="1600" height="700" fill="url(#board-bg)"/>
+          <ellipse cx="800" cy="425" rx="870" ry="205" fill="url(#horizon-glow)"/>
+          <g fill="none" stroke="#078cff" stroke-width="13" opacity=".45" filter="url(#trace-glow)">
+            <path d="M-50 610 280 450h290l90-65h180l110 65h220l480 200"/>
+            <path d="M-30 520h260l120-80h220l110-65h240l120 65h220l390 80"/>
+            <path d="M-50 390h300l75 45h220l100-60h310l95 60h230l370-45"/>
+          </g>
+          <g fill="none" stroke="url(#trace)" stroke-width="3">
+            <path d="M-60 650h180l110-75h130l95-75h130l95-75h170l95 75h155l105 75h130l110 75h260"/>
+            <path d="M-50 610h230l105-65h140l95-70h120l90-70h190l100 70h140l110 70h155l120 65h140"/>
+            <path d="M-50 565h300l95-55h150l95-65h115l90-60h210l90 60h145l105 65h180l250 55"/>
+            <path d="M-50 520h260l105-80h220l110-65h240l120 65h220l115 80h310"/>
+            <path d="M-50 475h330l75 45h175l105-65h190l100 65h195l90-45h250"/>
+            <path d="M-50 430h280l85 45h165l100-45h210l105 45h180l115-45h350"/>
+            <path d="M-50 385h360l80 45h150l110-60h220l90 60h170l120-45h390"/>
+            <path d="M-50 340h330l90 45h180l100-60h220l110 60h195l100-45h350"/>
+            <path d="M40 700V610l80-45v-90l110-45v-90l80-45V250"/>
+            <path d="M255 700v-80l95-55v-75l105-70v-95l80-55V190"/>
+            <path d="M510 700v-85l105-70v-80l100-70v-105l80-65V170"/>
+            <path d="M800 700v-105l85-65v-80l-65-65v-100l-80-65V170"/>
+            <path d="M1075 700v-80l-90-60v-90l-95-65v-95l-80-65V180"/>
+            <path d="M1340 700v-85l-105-70v-85l-105-70v-90l-80-55V200"/>
+            <path d="M1570 700v-95l-100-60v-95l-95-65v-90l-75-45V200"/>
+          </g>
+          <g fill="none" stroke="#73ddff" stroke-width="1.5" opacity=".75">
+            <path d="M0 590h260l100-60h150l105-70h150m-260 240v-95l90-60m90 155v-85l110-70"/>
+            <path d="M1600 560h-260l-100-55h-170l-100-65m630 190h-210l-110-65h-130"/>
+            <path d="M390 0v100l80 55v75m300-230v110l70 55v75m350-240v90l-75 55v80"/>
+          </g>
+          <g fill="#2bd2ff">
+            <circle cx="280" cy="450" r="8"/><circle cx="505" cy="370" r="7"/>
+            <circle cx="660" cy="295" r="7"/><circle cx="800" cy="255" r="9"/>
+            <circle cx="960" cy="300" r="7"/><circle cx="1110" cy="375" r="8"/>
+            <circle cx="1320" cy="445" r="7"/><circle cx="350" cy="545" r="6"/>
+            <circle cx="615" cy="545" r="7"/><circle cx="990" cy="515" r="7"/>
+            <circle cx="1235" cy="545" r="6"/><circle cx="470" cy="155" r="6"/>
+            <circle cx="1185" cy="145" r="6"/>
+          </g>
+          <g fill="#f5a987">
+            <circle cx="360" cy="420" r="5"/><circle cx="1230" cy="390" r="5"/>
+            <circle cx="1035" cy="245" r="4"/>
+          </g>
+          <rect width="1600" height="700" fill="url(#copy-shade)"/>
+        </svg>
+      </div>
       <div class="hero-content">
         <div class="hero-copy">
           <p class="eyebrow">Gavin Thennes · ENGINEERING STUDENT</p>
-          <h1>Creating thoughtful<br>solutions for <span>real world problems.</span></h1>
+          <h1>Creating<br>solutions for <span>real world problems.</span></h1>
           <p class="intro">
-            I am a driven engineering student who enjoys turning ideas into practical,
-            measurable solutions. My interests include software design, systems thinking,
-            embedded technology, and building tools that create meaningful impact.
+            I am an engineering student who enjoys turning ideas into practical, durable solutions.
+            My interests include software design, systems thinking, embedded technology, and
+            experimenting with homelab infrastructure, including TrueNAS.
           </p>
           <div class="hero-actions">
             <a class="button primary" href="projects.html">Explore my work ↗</a>
